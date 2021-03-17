@@ -1,0 +1,111 @@
+﻿<Page x:Class="CakeApp.Tables.OrderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CakeApp.Tables"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" 
+      d:DesignWidth="800"
+      Title="OrderPage">
+    <Page.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Page.Resources>
+    <Grid
+        Background="#b8fef3">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="132"/>
+            <ColumnDefinition Width="132"/>
+            <ColumnDefinition Width="132"/>
+            <ColumnDefinition Width="132"/>
+            <ColumnDefinition Width="132"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button
+            Grid.Column="0"
+            Grid.Row="0"
+            x:Name="refreshTableButton"
+            ToolTip="Обновление данных в таблице"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Content="Обновить" Click="refreshTableButton_Click">
+        </Button>
+        
+        <Button
+            Grid.Column="1"
+            Grid.Row="0"
+            x:Name="addTableButton"
+            ToolTip="Добавление новой строки"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Content="Добавить" 
+            Click="addTableButton_Click">
+        </Button>
+        
+        <Button
+            Grid.Column="2"
+            Grid.Row="0"
+            x:Name="deleteTableButton"
+            ToolTip="Сохранение внесенных изменений"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Content="Удалить" Click="deleteTableButton_Click">
+        </Button>
+
+        <Button
+            Grid.Column="3"
+            Grid.Row="0"
+            x:Name="editTableButton"
+            ToolTip="Сохранение внесенных изменений"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Content="Изменить" 
+            Click="editTableButton_Click">
+        </Button>
+
+        <ListBox
+            x:Name="listBoxForTable"
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="6"
+            Background="#b8fef3" 
+            SelectionChanged="listBoxForTable_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="16"/>
+                            <RowDefinition Height="16"/>
+                            <RowDefinition Height="16"/>
+                        </Grid.RowDefinitions>
+                        
+                        <TextBlock Grid.Column="0" Grid.Row="0" Text="{Binding Path = Номер, StringFormat = 'Номер: {0}'}"/>
+                        <TextBlock Grid.Column="0" Grid.Row="1" Text="{Binding Path = Дата, StringFormat = 'Дата заказа: {0}'}"/>
+                        <TextBlock Grid.Column="0" Grid.Row="2" Text="{Binding Path = Наименование_заказа, StringFormat = 'Имя заказа: {0}'}"/>
+                        <TextBlock Grid.Column="2" Grid.Row="0" Text="{Binding Path = Изделие, StringFormat = 'Изделие: {0}'}"/>
+                        <TextBlock Grid.Column="2" Grid.Row="1" Text="{Binding Path = Заказчик, StringFormat = 'Заказчик: {0}'}"/>
+                        <TextBlock Grid.Column="2" Grid.Row="2" Text="{Binding Path = Ответственный_менеджер, StringFormat = 'Менеджер: {0}'}"/>
+                        <TextBlock Grid.Column="4" Grid.Row="0" Text="{Binding Path = Стоимость, StringFormat = 'Стоимость: {0}'}"/>
+                        <TextBlock Grid.Column="4" Grid.Row="1" Text="{Binding Path = Плановая_дата_завершения, StringFormat = 'Плановая дата завершения: {0}'}"/>
+                        <TextBlock Grid.Column="4" Grid.Row="2" Text="{Binding Path = Примеры_работ, StringFormat = 'Пример работы: {0}'}"/>
+                        
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Page>

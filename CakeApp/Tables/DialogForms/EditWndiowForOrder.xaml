@@ -1,0 +1,83 @@
+﻿<Window x:Class="CakeApp.Tables.DialogForms.EditWndiowForOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CakeApp.Tables.DialogForms"
+        mc:Ignorable="d"
+        Title="EditWndiowForOrder" 
+        Height="400" 
+        Width="800"
+        ResizeMode="NoResize">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property = "Background" Value = "#a4adee"/>
+            <Setter Property = "Foreground" Value = "#b965c6"/>
+            <Setter Property = "TextAlignment" Value = "Left"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="28"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="28"/>
+        </Style>
+    </Window.Resources>
+    <Grid Background="#b8fef3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="Номер"/>
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="Дата"/>
+        <TextBlock Grid.Column="0" Grid.Row="2" Text="Имя заказа"/>
+        <TextBlock Grid.Column="0" Grid.Row="3" Text="Изделие"/>
+        <TextBlock Grid.Column="0" Grid.Row="4" Text="Примеры работ" FontSize="18"/>
+        <TextBlock Grid.Column="2" Grid.Row="0" Text="Заказчик"/>
+        <TextBlock Grid.Column="2" Grid.Row="1" Text="Менеджер"/>
+        <TextBlock Grid.Column="2" Grid.Row="2" Text="Стоимость"/>
+        <TextBlock Grid.Column="2" Grid.Row="3" Text="План. дата завершения" FontSize="14"/>
+
+        <TextBlock x:Name="Номер" Grid.Column="1" Grid.Row="0" FontSize="28"/>
+        <TextBlock x:Name="Дата" Grid.Column="1" Grid.Row="1" FontSize="28"/>
+        <TextBox x:Name="Наименование_заказа" Grid.Column="1" Grid.Row="2"/>
+        <TextBox x:Name="Изделие" Grid.Column="1" Grid.Row="3"/>
+        <TextBox x:Name="Примеры_работ" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="4" />
+        <TextBox x:Name="Заказчик" Grid.Column="3" Grid.Row="0"/>
+        <TextBox x:Name="Менеджер" Grid.Column="3" Grid.Row="1"/>
+        <TextBox x:Name="Стоимость" Grid.Column="3" Grid.Row="2"/>
+        <DatePicker x:Name="План_дата_завершения" Grid.Column="3" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" Background="#a4adee" BorderBrush="Black"/>
+
+        <Button
+            x:Name="addButton"
+            Grid.Column="3"
+            Grid.Row="5"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left" 
+            Click="addButton_Click">
+            Добавить
+        </Button>
+
+        <Button
+            x:Name="cancelButton"
+            Grid.Column="3"
+            Grid.Row="5"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right">
+            Отмена
+        </Button>
+    </Grid>
+</Window>
