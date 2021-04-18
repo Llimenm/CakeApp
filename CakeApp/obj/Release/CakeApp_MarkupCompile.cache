@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\Lim\Source\Repos\CakeApp\CakeApp\obj\Debug\
+C:\Users\Lim\Source\Repos\CakeApp\CakeApp\obj\Release\
 CakeApp
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\Lim\Source\Repos\CakeApp\CakeApp\App.xaml
 7-2002089948
 21750853300
@@ -16,5 +16,5 @@ C:\Users\Lim\Source\Repos\CakeApp\CakeApp\App.xaml
 212096425877
 MainWindow.xaml;Registration.xaml;Tables\DialogForms\EditWindowsForIngredients.xaml;Tables\DialogForms\EditWndiowForOrder.xaml;Tables\IngredientPage.xaml;Tables\OrderPage.xaml;UserCabinet.xaml;
 
-False
+True
 

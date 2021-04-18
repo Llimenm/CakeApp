@@ -11,7 +11,7 @@ namespace CakeApp
     /// </summary>
     public partial class UserCabinet : Window
     {
-        public UserCabinet()
+        public UserCabinet() 
         {
             InitializeComponent();
             SeconNameBlock.Text = userData.user.Фамилия;
@@ -20,14 +20,14 @@ namespace CakeApp
             var tablesName = new List<string> { "Ингредиенты", "Заказы" };
             tableSwitchBox.ItemsSource = tablesName;
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e) // Выход на страницу авторизации
         {
             MainWindow window = new MainWindow();
             this.Close();
             window.Show();
         }
 
-        private void tableSwitchBox_DropDownClosed(object sender, System.EventArgs e)
+        private void tableSwitchBox_DropDownClosed(object sender, System.EventArgs e) // Выбор таблицы
         {
             switch (tableSwitchBox.Text)
             {

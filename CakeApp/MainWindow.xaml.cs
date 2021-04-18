@@ -15,7 +15,7 @@ namespace CakeApp
             InitializeComponent();
         }
 
-        private void TextBox_KeyDown(object sender, KeyEventArgs e)
+        private void TextBox_KeyDown(object sender, KeyEventArgs e) // Собтие проверки нажатия Enter, для запуска события авторизации 
         {
             if (e.Key == Key.Enter)
             {
@@ -23,7 +23,7 @@ namespace CakeApp
             }
         }
 
-        private void Login_button_Click(object sender, RoutedEventArgs e)
+        private void Login_button_Click(object sender, RoutedEventArgs e) // Событие авторищации пользователя
         {
             string LoginUser = Login_TextBox.Text;
             string Password = PasswordBox.Password;
@@ -47,7 +47,7 @@ namespace CakeApp
             }
         }
 
-        private void PasswordBox_KeyDown(object sender, KeyEventArgs e)
+        private void PasswordBox_KeyDown(object sender, KeyEventArgs e) // Собтие проверки нажатия Enter, для запуска события авторизации 
         {
             if (e.Key == Key.Enter)
             {
@@ -55,14 +55,14 @@ namespace CakeApp
             }
         }
 
-        private void Registration_button_Click(object sender, RoutedEventArgs e)
+        private void Registration_button_Click(object sender, RoutedEventArgs e) // Вызов окна регистрации
         {
             Registration registration = new Registration();
             Close();
             registration.Show();
         }
 
-        private void Window_Closed(object sender, EventArgs e)
+        private void Window_Closed(object sender, EventArgs e) // Принудительное событие закрытия окна
         {
             this.Close();
         }

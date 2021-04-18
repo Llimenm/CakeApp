@@ -23,7 +23,7 @@ namespace CakeApp.Tables.DialogForms
         {
             InitializeComponent();
         }
-        private void addButton_Click(object sender, RoutedEventArgs e)
+        private void addButton_Click(object sender, RoutedEventArgs e) // Событие добавление нового ингридиента
         {
             using (CakesEntities db = new CakesEntities())
             {
